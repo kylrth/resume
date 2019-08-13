@@ -62,18 +62,18 @@
       \end{minipage}}\fi
     \par\addvspace{#1}}
 
-\newcommand*{\customcvproject}[4][.25em]{
+\newcommand*{\customcvproject}[5][.25em]{
   \begin{tabular}{@{}l}
-    {\bfseries #2}
+    {\textbf{#2} - \textit{#3}}
   \end{tabular}
   \hfill
   \begin{tabular}{l@{}}
-     {\itshape #3}
+     {\itshape #4}
   \end{tabular}
-  \ifx&#4&
+  \ifx&#5&
   \else{\\
     \begin{minipage}{0.77\maincolumnwidth} % TODO: consider moving these out so the role is what stands alone
-      \small#4
+      \small#5
     \end{minipage}}\fi
   \par\addvspace{#1}}
 
@@ -119,19 +119,21 @@
 \vspace{1.5 mm}
 
 {\customcventry{Jan 2019 - current}{Research assistant}{CamachoLab, Brigham Young University}{Provo, UT}{}
-{\begin{itemize}
-  \item Simulated field profiles of photonic chip components using a deconvolutional neural network  % TODO: flesh this out
-  \item Built SLURM\_gen, a tool for generating and managing simulation datasets in a high-performance computing environment
-\end{itemize}
+{
+  \begin{itemize}
+    \item Simulated field profiles of photonic chip components using a deconvolutional neural network  % TODO: flesh this out
+    \item Built SLURM\_gen, a tool for generating and managing simulation datasets in a high-performance computing environment
+  \end{itemize}
 }
 
 \vspace{1.5 mm}
 
 {\customcventry{Apr 2018 - Nov 2018}{Modeling Intern}{Cobalt Speech and Language}{Provo, UT}{}
-{\begin{itemize}
-  \item Improved accuracy of a neural network model for autonomous drone recognition of air traffic control speech from 24\% to 6\% error, using class-based (Thrax) language models
-  \item Wrote Go scripts to validate and generate spec files for a natural language understanding engine
-\end{itemize}
+{
+  \begin{itemize}
+    \item Improved accuracy of a neural network model for autonomous drone recognition of air traffic control speech from 24\% to 6\% error, using class-based (Thrax) language models
+    \item Wrote Go scripts to validate and generate spec files for a natural language understanding engine
+  \end{itemize}
 }
 }
 
@@ -146,11 +148,23 @@
 
 \section{PROJECTS}
 
-{\customcvproject{\textit{Speech2phone}}{Aug 2018 - May 2019}
-  {\begin{itemize}
-    \item Achieved 76\% accuracy on phoneme classification of the TIMIT corpus.
-    \item Created data caching mechanism for easy dataset access.
-  \end{itemize}
+{
+  \customcvproject{\textit{Speech2phone}}{senior group project}{Aug 2018 - May 2019}
+  {
+    \begin{itemize}
+      \item Achieved 76\% accuracy on phoneme classification of the TIMIT corpus.
+      \item Created data caching mechanism for easy dataset access.
+    \end{itemize}
+  }
+}
+
+{
+  \customcvproject{\textit{SLURM\_gen}}{open source tool}{May 2019 - current}
+  {
+    \begin{itemize}
+      \item Wrote a Python tool for organizing datasets generated on a SLURM high-performance computing environment.
+      \item Wrote functionality to automatically submit SLURM jobs to produce the desired dataset samples, based on experimental data from past runs.
+    \end{itemize}
   }
 }
 
