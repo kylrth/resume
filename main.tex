@@ -21,7 +21,7 @@
 %\usepackage{CJKutf8} % typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
+\usepackage[margin=0.78in,scale=0.8]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}      % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm} % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -95,14 +95,14 @@
 \end{tabular}
 \end{center}
 
-\vspace*{-7mm}
+\vspace*{-5mm}
 
 \section{EDUCATION}
 
 {\customcventry{Dec 2019}{B.S., Applied and Computational Mathematics Emphasis (3.9 GPA)}{Brigham Young University}{Provo, UT}{}{
   \begin{itemize}
     \item Minor in computer science; emphasis in linguistics
-    \item Relevant coursework: optimization, deep learning, analysis, algorithm design, data structures, computer systems, model uncertainty and data, dynamics and control
+    \item Relevant coursework: optimization, deep learning, analysis, algorithm design, data structures, computer systems, model uncertainty, data science
   \end{itemize}
 }}
 
@@ -121,7 +121,7 @@
 {\customcventry{Jan 2019 - current}{Research assistant}{CamachoLab, Brigham Young University}{Provo, UT}{}
 {
   \begin{itemize}
-    \item Simulated field profiles of photonic chip components using neural networks with resize convolutions
+    \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
     \item Built SLURM\_gen, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
   \end{itemize}
 }
@@ -137,23 +137,24 @@
 }
 }
 
-% example for multiple roles at single location
-% \begin{flushleft}
-% \textit{Systems Engineer}\hspace{315.0pt}\textbf{Bangalore, India}
-% \begin{itemize}
-%     \item Developed a comprehensive shell script that remotely monitored\hspace{45.0pt}\textit{March 2012 – July 2015}\\ the health of all the production services. The script visualized the current state of the different production services in a dashboard. The transparent report dashboard decreased production outage to one two incidents in a financial quarter.
-%     \item Encapsulated the build scripts in a Jenkins automation server. The user-friendly Jenkins GUI empowered the developers to trigger new builds themselves. The DevOps effort saved was 2 man-days every week.
-% \end{itemize}
-% \end{flushleft}
-
 \section{PROJECTS}
 
 {
   \customcvproject{\textit{Speech2phone}}{senior group project}{Aug 2018 - May 2019}
   {
     \begin{itemize}
-      \item Achieved 76\% accuracy on phoneme classification of the TIMIT corpus
+      \item Scored 76\% accuracy on phoneme classification of the TIMIT corpus
       \item Created data caching mechanism for easy dataset access
+    \end{itemize}
+  }
+}
+
+{
+  \customcvproject{Investigation in Variable-Order CRFs}{independent research project}{Oct 2017 - Dec 2018}
+  {
+    \begin{itemize}
+      \item Achieved 71.3\% accuracy on ZTC morphology corpus (Basque) with new VoCRF implementation
+      \item Used SLURM-based supercomputer to train memory-intensive models
     \end{itemize}
   }
 }
@@ -164,7 +165,6 @@
     \begin{itemize}
       \item Installed GPU-enabled TensorFlow and PyTorch with custom Anaconda environments and IPython kernels
       \item Hosted JupyterHub environment for multiple users on personal computer
-      \item Specified custom MFA authentication requirements for remote access over SSH
     \end{itemize}
   }
 }
@@ -172,17 +172,19 @@
 % ParaMA
 % Bokeh
 
-\section{AWARDS AND ACHIEVEMENTS}
+\section{SKILLS \& INTERESTS}
 
-% \begin{minipage}{\maincolumnwidth}%
-% 	\small{
-%     	\begin{itemize}
-%           \item Winner, Tata Innovista, November 2016
-%           \item President of XYZ Club, Public Relations Manager of Swarthmore QWE Club
-%           \item Programming Languages: Python, C, C++, PHP, Java, HTML/CSS, Javascript, jQuery, NodeJS
-%           \item Fluent in Gibberish, conversational in Nonsense
-% 		\end{itemize}}%
-% \end{minipage}%
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    \begin{multicols}{2}
+    \begin{itemize}
+          \item \textbf{Languages:} Python, C++, Go, Bash, Java, LaTeX
+          \item \textbf{Tools:} Git, AWS, Linux, SQL, MongoDB, PySpark, SLURM, scikit-learn, NumPy
+          \item \textbf{Natural languages:} Native English, fluent Spanish, \,\,\,basic Portuguese
+          \item \textbf{Sports:} Alpine skiing, distance running, swimming
+		\end{itemize}
+    \end{multicols}}
+\end{minipage}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
