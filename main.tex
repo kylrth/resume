@@ -21,7 +21,7 @@
 %\usepackage{CJKutf8} % typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[margin=0.78in,scale=0.8]{geometry}
+\usepackage[margin=0.73in,scale=0.8]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}      % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm} % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -77,11 +77,11 @@
     \end{minipage}}\fi
   \par\addvspace{#1}}
 
+% link coloring
+\newcommand\ColorHref[3][cyan]{\href{#2}{\small\color{#1}#3}}
+
 \setlength{\tabcolsep}{12pt}
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn} % to typeset your resume in Chinese using CJK
 
@@ -99,10 +99,10 @@
 
 \section{EDUCATION}
 
-{\customcventry{Dec 2019}{B.S., Applied and Computational Mathematics Emphasis (3.9 GPA)}{Brigham Young University}{Provo, UT}{}{
+{\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis (3.9 GPA)}{Brigham Young University}{Provo, UT}{}{
   \begin{itemize}
-    \item Minor in computer science; emphasis in linguistics
-    \item Relevant coursework: optimization, deep learning, analysis, algorithm design, data structures, computer systems, model uncertainty, data science
+    \item Minor in computer science; concentration in linguistics
+    \item Relevant coursework: optimization, deep learning, analysis, algorithm design, data structures, computer systems, model uncertainty, data science, natural language processing
   \end{itemize}
 }}
 
@@ -116,22 +116,23 @@
 }
 }
 
-\vspace{1.5 mm}
+\vspace{1.2 mm}
 
 {\customcventry{Jan 2019 - current}{Research assistant}{CamachoLab, Brigham Young University}{Provo, UT}{}
 {
   \begin{itemize}
     \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
-    \item Built SLURM\_gen, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
+    \item Built \ColorHref{https://github.com/kylrth/slurm_gen}{SLURM\_gen}, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
+    \item Presented early results at the BYU student research conference
   \end{itemize}
 }
 
-\vspace{1.5 mm}
+\vspace{1.2 mm}
 
-{\customcventry{Apr 2018 - Nov 2018}{Modeling Intern}{Cobalt Speech and Language}{Provo, UT}{}
+{\customcventry{Apr 2018 - Nov 2018}{Modeling Intern}{Cobalt Speech and Language}{Tyngsboro, MA}{}
 {
   \begin{itemize}
-    \item Improved accuracy of a neural network model for autonomous drone recognition of air traffic control speech from 24\% to 6\% error, using class-based (Thrax) language models
+    \item Improved accuracy of a neural network model from 76\% to 94\% for autonomous drone recognition of air traffic control speech using class-based (Thrax) language models
     \item Wrote Go scripts to validate and generate spec files for a natural language understanding engine
   \end{itemize}
 }
@@ -145,12 +146,13 @@
     \begin{itemize}
       \item Scored 76\% accuracy on phoneme classification of the TIMIT corpus
       \item Created data caching mechanism for easy dataset access
+      \item Wrote research-style \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{paper} describing methods and results
     \end{itemize}
   }
 }
 
 {
-  \customcvproject{Investigation in Variable-Order CRFs}{independent research project}{Oct 2017 - Dec 2018}
+  \customcvproject{Investigation in Variable-Order CRFs}{grant-funded independent research}{Oct 2017 - Dec 2018}
   {
     \begin{itemize}
       \item Achieved 71.3\% accuracy on ZTC morphology corpus (Basque) with new VoCRF implementation
@@ -179,7 +181,7 @@
     \begin{multicols}{2}
     \begin{itemize}
           \item \textbf{Languages:} Python, C++, Go, Bash, Java, LaTeX
-          \item \textbf{Tools:} Git, AWS, Linux, SQL, MongoDB, PySpark, SLURM, scikit-learn, NumPy
+          \item \textbf{Tools:} git, AWS, Linux, SQL, MongoDB, PySpark, SLURM, scikit-learn, NumPy
           \item \textbf{Natural languages:} Native English, fluent Spanish, \,\,\,basic Portuguese
           \item \textbf{Sports:} Alpine skiing, distance running, swimming
 		\end{itemize}
