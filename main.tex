@@ -15,13 +15,15 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex}
 \usepackage{fontawesome}
 \usepackage{tabularx}
 \usepackage{ragged2e}
 %\usepackage{CJKutf8} % typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[margin=0.73in,scale=0.8]{geometry}
+\usepackage[margin=0.71in,scale=0.8]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}      % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm} % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
@@ -192,9 +194,9 @@
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
 %\section{Publications}
