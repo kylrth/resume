@@ -5,32 +5,27 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-% font size ('10pt', '11pt', '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper', 'landscape') and font family ('sans', 'roman')
 \documentclass[11pt,letterpaper,roman]{moderncv}
 
 % modern themes
-\moderncvstyle{banking} % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black} % 'blue', 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault} % set default font
+\moderncvstyle{banking}
+\moderncvcolor{black}
 \nopagenumbers{}
 
-% character encoding
-\usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex}
 \usepackage{fontawesome}
 \usepackage{tabularx}
 \usepackage{ragged2e}
 
-% typeset your resume in Chinese, Japanese or Korean
-%\usepackage{CJKutf8}
+% better font
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Arimo}
 
 % adjust the page margins
-\usepackage[margin=0.71in,scale=0.8]{geometry}
+\usepackage[margin=0.6in,scale=0.8]{geometry}
 \usepackage{multicol}
-%\setlength{\hintscolumnwidth}{3cm}      % if you want to change the width of the column with the dates
-
-\usepackage{import}
+%\setlength{\hintscolumnwidth}{3cm}  % set the width of the date column
 
 \name{Kyle}{Roth}
 
@@ -90,43 +85,40 @@
 
 \begin{document}
 
-% to typeset your resume in Chinese using CJK
-% \begin{CJK*}{UTF8}{gbsn}
-
 \makecvtitle
 
-\vspace*{-18mm}
+\vspace*{-19mm}
 
 \begin{center}
-\begin{tabular}{ c c c c c }
- \faMapMarker\enspace Provo, UT &
- \faGlobe\enspace kylrth.com &
- \faEnvelopeO\enspace kylrth@gmail.com &
- \faGithub\enspace kylrth &
- \faMobile\enspace +1 208 704 9909
-\end{tabular}
+  \begin{tabular}{ c c c c c }
+    \faMapMarker\enspace Provo, UT        &
+    \faGlobe\enspace kylrth.com           &
+    \faEnvelopeO\enspace kylrth@gmail.com &
+    \faGithub\enspace kylrth              &
+    \faMobile\enspace +1 208 704 9909
+  \end{tabular}
 \end{center}
 
 \vspace*{-5mm}
 
 \section{EDUCATION}
 
-{\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis (3.9 GPA)}{Brigham Young University}{Provo, UT}{}{
-  \begin{itemize}
-    \item Minor in computer science; concentration in linguistics
-    \item Relevant coursework: deep learning, NLP, optimization, algorithms, data structures
-  \end{itemize}
-}}
+ {\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis (3.9 GPA)}{Brigham Young University}{Provo, UT}{}{
+    \begin{itemize}
+      \item Minor in computer science; concentration in linguistics
+      \item Relevant coursework: deep learning, NLP, optimization, algorithms, data structures
+    \end{itemize}
+  }}
 
 \section{EXPERIENCE}
 
-{\customcventry{May 2019 - Aug 2019}{Intern}{Emergent Trading}{Chicago, IL}{}
-{\begin{itemize}
-  \item Built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh \textbf{Python} library
-  \item Wrote fast and extensible analysis code in \textbf{C++} to track competitor's responses to market conditions in the Chicago Mercantile Exchange
-\end{itemize}
-}
-}
+ {\customcventry{May 2019 - Aug 2019}{Intern}{Emergent Trading}{Chicago, IL}{}
+  {\begin{itemize}
+      \item Built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh \textbf{Python} library
+      \item Wrote fast and extensible analysis code in \textbf{C++} to track competitor's responses to market conditions in the Chicago Mercantile Exchange
+    \end{itemize}
+  }
+ }
 
 \vspace{1.2 mm}
 
@@ -143,17 +135,17 @@
 \vspace{1.2 mm}
 
 {\customcventry{Apr 2018 - Nov 2018}{Modeling Intern}{Cobalt Speech and Language}{Tyngsboro, MA}{}
-{
-  \begin{itemize}
-    \item Improved accuracy of a neural network model from 76\% to 94\% for autonomous drone recognition of air traffic control speech using class-based (Thrax) language models
-    \item Wrote \textbf{Go} scripts to validate and generate spec files for a natural language understanding engine
-  \end{itemize}
-}
+  {
+    \begin{itemize}
+      \item Improved accuracy of a neural network model from 76\% to 94\% for autonomous drone recognition of air traffic control speech using class-based (Thrax) language models
+      \item Wrote \textbf{Go} scripts to validate and generate spec files for a natural language understanding engine
+    \end{itemize}
+  }
 }
 
 \section{PROJECTS}
 
-{
+ {
   \customcvproject{\textit{Speech2phone}}{senior group project}{Aug 2018 - May 2019}
   {
     \begin{itemize}
@@ -162,9 +154,9 @@
       \item Wrote research-style \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{paper} describing methods and results
     \end{itemize}
   }
-}
+ }
 
-{
+ {
   \customcvproject{Investigation in Variable-Order CRFs}{grant-funded independent research}{Oct 2017 - Dec 2018}
   {
     \begin{itemize}
@@ -172,9 +164,9 @@
       \item Used SLURM-based supercomputer to train memory-intensive models
     \end{itemize}
   }
-}
+ }
 
-{
+ {
   \customcvproject{Custom deep learning setup}{personal project}{Mar 2019 - current}
   {
     \begin{itemize}
@@ -182,23 +174,19 @@
       \item Hosted JupyterHub environment for multiple users on personal computer
     \end{itemize}
   }
-}
-
-% Could be added:
-% - ParaMA
-% - Bokeh
+ }
 
 \section{SKILLS \& INTERESTS}
 
 \begin{minipage}{\maincolumnwidth}
-	\small{
+  \small{
     \begin{multicols}{2}
-    \begin{itemize}
-          \item \textbf{Languages:} Python, C++, Go, Java, Bash, LaTeX
-          \item \textbf{Tools:} git, AWS, SQL, MongoDB, PySpark, scikit-learn, NumPy, Pandas
-          \item \textbf{Natural languages:} Native English, fluent Spanish, \,\,\,basic Portuguese
-          \item \textbf{Sports:} Alpine skiing, distance running, swimming
-		\end{itemize}
+      \begin{itemize}
+        \item \textbf{Languages:} Python, C++, Go, Java, Bash, LaTeX
+        \item \textbf{Tools:} git, AWS, SQL, MongoDB, PySpark, scikit-learn, NumPy, Pandas
+        \item \textbf{Natural languages:} Native English, fluent Spanish, \,\,\,basic Portuguese
+        \item \textbf{Sports:} Alpine skiing, distance running, swimming
+      \end{itemize}
     \end{multicols}}
 \end{minipage}
 
