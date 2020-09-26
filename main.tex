@@ -13,7 +13,8 @@
 \nopagenumbers{}
 
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex}
+\setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex,label=\raisebox{0.25ex}{\tiny$\bullet$}}
+
 \usepackage{fontawesome}
 \usepackage{tabularx}
 \usepackage{ragged2e}
@@ -24,21 +25,11 @@
 \setmainfont[Ligatures=TeX]{Noto Serif}
 
 % adjust the page margins
-\usepackage[margin=0.6in,scale=0.8]{geometry}
+\usepackage[margin=0.58in,scale=0.8]{geometry}
 \usepackage{multicol}
 %\setlength{\hintscolumnwidth}{3cm}  % set the width of the date column
 
 \name{Kyle}{Roth}
-
-% to show numerical labels in the bibliography (default is to show no labels)
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 
 \newcommand*{\customcventry}[7][.25em]{
   \begin{tabular}{@{}l}
@@ -100,82 +91,68 @@
   \end{tabular}
 \end{center}
 
-\vspace*{-5mm}
-
-\section{EDUCATION}
-
- {\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis (3.9 GPA)}{Brigham Young University}{Provo, UT}{}{
-    \begin{itemize}
-      \item Minor in computer science; concentration in linguistics
-      \item Relevant coursework: deep learning, NLP, optimization, algorithms, data structures
-    \end{itemize}
-  }}
+\vspace*{-7mm}
 
 \section{EXPERIENCE}
 
- {\customcventry{May 2019 - Aug 2019}{Intern}{Emergent Trading}{Chicago, IL}{}
-  {\begin{itemize}
-      \item Built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh \textbf{Python} library
-      \item Wrote fast and extensible analysis code in \textbf{C++} to track competitor's responses to market conditions in the Chicago Mercantile Exchange
-    \end{itemize}
-  }
- }
+{\customcventry{Jan 2020 - current}{Speech scientist}{Cobalt Speech and Language}{remote}{}
+{\begin{itemize}
+    \item Built an online training server for Kaldi speech recognition models, using Go to create a parallel pipeline for serving data to multiple models on separate GPUs
+    \item Implemented state-of-the-art algorithms (such as the learning rate range test and adaptive filtering) to set learning rate and momentum in an online training setting
+  \end{itemize}
+}
+}
 
-\vspace{1.2 mm}
+{\customcventry{May - Aug 2019}{Intern}{Emergent Trading}{Chicago, IL}{}
+{\begin{itemize}
+    \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
+    \item Built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh Python library
+  \end{itemize}
+}
+}
 
-{\customcventry{Jan 2019 - current}{Research assistant}{CamachoLab, Brigham Young University}{Provo, UT}{}
+{\customcventry{Jan - Dec 2019}{Research assistant}{CamachoLab, Brigham Young University}{Provo, UT}{}
 {
   \begin{itemize}
-    \item Simulated field profiles of photonic chip components in \textbf{TensorFlow} using neural networks with resize convolutions
+    \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
     \item Built \ColorHref{https://github.com/kylrth/slurm_gen}{SLURM\_gen}, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
     \item Wrote custom resize-convolution layer to improve performance
-    \item Presented early results at the BYU student research conference
   \end{itemize}
 }
 
-\vspace{1.2 mm}
-
-{\customcventry{Apr 2018 - Nov 2018}{Modeling Intern}{Cobalt Speech and Language}{Tyngsboro, MA}{}
+{\customcventry{Apr 2018 - Nov 2018}{Speech modeling intern}{Cobalt Speech and Language}{remote}{}
   {
     \begin{itemize}
-      \item Improved accuracy of a neural network model from 76\% to 94\% for autonomous drone recognition of air traffic control speech using class-based (Thrax) language models
-      \item Wrote \textbf{Go} scripts to validate and generate spec files for a natural language understanding engine
+      \item Improved model accuracy from 76\% to 94\% for autonomous drone recognition of air traffic control speech, using class-based (Thrax) language models
     \end{itemize}
   }
 }
 
-\section{PROJECTS}
+\section{EDUCATION}
 
- {
-  \customcvproject{\textit{Speech2phone}}{senior group project}{Aug 2018 - May 2019}
-  {
+ {\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Brigham Young University}{Provo, UT}{}{
     \begin{itemize}
-      \item Scored 76\% accuracy on phoneme classification of the TIMIT corpus
-      \item Created data caching mechanism for easy dataset access
-      \item Wrote research-style \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{paper} describing methods and results
+      \item Cum Laude (\textbf{3.9 GPA}); minor in computer science; concentration in linguistics
+      \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (research-style paper \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
+      \item \textbf{Grant-funded research}: used the BYU supercomputer to achieve 71\% accuracy on the ZTC morphology corpus (Basque) with a recent VoCRF implementation
     \end{itemize}
-  }
- }
+  }}
 
- {
-  \customcvproject{Investigation in Variable-Order CRFs}{grant-funded independent research}{Oct 2017 - Dec 2018}
-  {
-    \begin{itemize}
-      \item Achieved 71.3\% accuracy on ZTC morphology corpus (Basque) with new VoCRF implementation
-      \item Used SLURM-based supercomputer to train memory-intensive models
-    \end{itemize}
-  }
- }
+\section{SERVICE}
 
- {
-  \customcvproject{Custom deep learning setup}{personal project}{Mar 2019 - current}
-  {
+ {\customcventry{Jul - Aug 2018}{volunteer}{Refugee4Refugees}{Mitilini, Greece}{}{
     \begin{itemize}
-      \item Installed GPU-enabled TensorFlow and \textbf{PyTorch} with custom Anaconda environments and IPython kernels
-      \item Hosted JupyterHub environment for multiple users on personal computer
+      \item Stood night watch to spot and land refugee boats as they arrived from Turkey
+      \item Taught swimming; cleaned up around Moria camp; organized donated materials
     \end{itemize}
-  }
- }
+  }}
+
+ {\customcventry{Feb 2015 - Feb 2017}{missionary}{Church of Jesus Christ of Latter-Day Saints}{Quetzaltenango, Guatemala}{}{
+    \begin{itemize}
+      \item Taught and developed relationships with families all over northwestern Guatemala
+      \item Learned Spanish to an exceptionally fluent level, probably a 3+ on the ILR scale
+    \end{itemize}
+  }}
 
 \section{SKILLS \& INTERESTS}
 
@@ -183,28 +160,12 @@
   \small{
     \begin{multicols}{2}
       \begin{itemize}
-        \item \textbf{Languages:} Python, C++, Go, Java, Bash, LaTeX
-        \item \textbf{Tools:} git, AWS, SQL, MongoDB, PySpark, scikit-learn, NumPy, Pandas
+        \item \textbf{Languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX
+        \item \textbf{Tools:} TensorFlow, PyTorch, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, MongoDB, PySpark
         \item \textbf{Natural languages:} Native English, fluent Spanish, \,\,\,basic Portuguese
         \item \textbf{Sports:} Alpine skiing, distance running, swimming
       \end{itemize}
     \end{multicols}}
 \end{minipage}
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-% \nocite{*}
-% \bibliographystyle{plain}
-% \bibliography{publications} % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications} % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications} % 'publications' is the name of a BibTeX file
 
 \end{document}
