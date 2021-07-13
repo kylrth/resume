@@ -5,6 +5,8 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
+% !TEX program = xelatex
+
 \documentclass[11pt,letterpaper,roman]{moderncv}
 
 % modern themes
@@ -13,16 +15,15 @@
 \nopagenumbers{}
 
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex,label=\raisebox{0.25ex}{\tiny$\bullet$}}
+\setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex,label=\raisebox{0.25ex}{\tiny\(\bullet\)}}
+
+\usepackage{lmodern}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Noto Serif}
 
 \usepackage{fontawesome}
 \usepackage{tabularx}
 \usepackage{ragged2e}
-
-% better font
-\usepackage{fontspec}
-% \setmainfont[Ligatures=TeX]{Century Schoolbook L}
-\setmainfont[Ligatures=TeX]{Noto Serif}
 
 % adjust the page margins
 \usepackage[margin=0.58in,scale=0.8]{geometry}
@@ -40,11 +41,11 @@
       {\bfseries #5}
   \end{tabular} \\
   \begin{tabular}{@{}l}
-    {\itshape #3}
+    {\itshape{} #3}
   \end{tabular}
   \hfill
   \begin{tabular}{l@{}}
-      {\itshape #2}
+      {\itshape{} #2}
   \end{tabular}
   \ifx&#7&
   \else{\\
@@ -77,28 +78,39 @@
 
 \begin{document}
 
-\makecvtitle
+\makecvtitle{}
 
-\vspace*{-19mm}
+\vspace*{-14mm}
 
 \begin{center}
   \begin{tabular}{ c c c c c }
-    \faMapMarker\enspace Provo, UT        &
-    \faGlobe\enspace kylrth.com           &
-    \faEnvelopeO\enspace kylrth@gmail.com &
-    \faGithub\enspace kylrth              &
-    \faMobile\enspace +1 208 704 9909
+    \faMapMarker\enspace{Montreal, QC}     &
+    \faGlobe\enspace{kylrth.com}           &
+    \faEnvelopeO\enspace{kylrth@gmail.com} &
+    \faGithub\enspace{kylrth}              &
+    \faMobile\enspace{+1 208 704 9909}
   \end{tabular}
 \end{center}
 
 \vspace*{-7mm}
 
-\section{EXPERIENCE}
+\section{EDUCATION}
 
-{\customcventry{Jan 2020 - current}{Speech scientist (full time)}{Cobalt Speech and Language}{remote from Provo, UT}{}
+ {\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Brigham Young University}{Provo, UT}{}{
+    \begin{itemize}
+      \item Cum Laude (\textbf{3.9 GPA}); minor in computer science; concentration in linguistics
+      \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (research-style paper \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
+      \item \textbf{Grant-funded research}: used the BYU supercomputer to achieve 71\% accuracy on the ZTC morphology corpus (Basque) with a recent VoCRF implementation
+    \end{itemize}
+  }}
+
+\section{INDUSTRY EXPERIENCE}
+
+{\customcventry{Jan 2020 - Aug 2021}{Speech scientist (full time)}{Cobalt Speech and Language}{remote from Provo, UT}{}
 {\begin{itemize}
     \item Built an online training server for Kaldi speech recognition models, using Go to create a parallel pipeline for serving data to multiple models on separate GPUs
     \item Implemented state-of-the-art algorithms (such as the learning rate range test and adaptive filtering) to set learning rate and momentum in an online training setting
+    \item Implemented MFCC extraction in Go, avoiding allocs and array bound checks to improve performance
   \end{itemize}
 }
 }
@@ -128,16 +140,6 @@
   }
 }
 
-\section{EDUCATION}
-
- {\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Brigham Young University}{Provo, UT}{}{
-    \begin{itemize}
-      \item Cum Laude (\textbf{3.9 GPA}); minor in computer science; concentration in linguistics
-      \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (research-style paper \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
-      \item \textbf{Grant-funded research}: used the BYU supercomputer to achieve 71\% accuracy on the ZTC morphology corpus (Basque) with a recent VoCRF implementation
-    \end{itemize}
-  }}
-
 \section{SERVICE}
 
  {\customcventry{Jul - Aug 2018}{Volunteer}{Refugee4Refugees}{Mitilini, Greece}{}{
@@ -147,22 +149,15 @@
     \end{itemize}
   }}
 
- {\customcventry{Feb 2015 - Feb 2017}{Missionary}{Church of Jesus Christ of Latter-Day Saints}{Quetzaltenango, Guatemala}{}{
-    \begin{itemize}
-      \item Taught and developed relationships with families all over northwestern Guatemala
-      \item Learned Spanish to an exceptionally fluent level, around a 3+ on the ILR scale
-    \end{itemize}
-  }}
-
 \section{SKILLS \& INTERESTS}
 
 \begin{minipage}{\maincolumnwidth}
   \small{
     \begin{multicols}{2}
       \begin{itemize}
-        \item \textbf{Languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX
-        \item \textbf{Tools:} TensorFlow, PyTorch, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, MongoDB, PySpark
-        \item \textbf{Natural languages:} Native English, fluent Spanish, \,\,\,basic Portuguese
+        \item \textbf{Languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
+        \item \textbf{Tools:} TensorFlow, PyTorch, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, strace, PySpark
+        \item \textbf{Natural languages:} Native English, fluent Spanish
         \item \textbf{Sports:} Alpine skiing, distance running, swimming
       \end{itemize}
     \end{multicols}}
