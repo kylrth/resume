@@ -41,7 +41,7 @@
       {\bfseries #5}
   \end{tabular} \\
   \begin{tabular}{@{}l}
-    {\itshape{} #3}
+    {\,\,\itshape{} #3}
   \end{tabular}
   \hfill
   \begin{tabular}{l@{}}
@@ -96,17 +96,19 @@
 
 \section{EDUCATION}
 
- {\customcventry{May 2023 - current}{Ph.D., Computer Science}{Universit\'e de Montr\'eal}{Montr\'eal, QC}{}{
+ {\customcventry{Sep 2021 - May 2025}{Ph.D., Computer Science; advised by Dr.~Bang Liu}{Universit\'e de Montr\'eal}{Montr\'eal, QC}{}{
     \begin{itemize}
-      \item \textbf{4.3 GPA}; advised by Dr.~Bang Liu
+      \item investigating the representation of procedural knowledge using language models
+      \item \textbf{4.3 GPA} during first year as master's student
+      \item switched from master's to doctoral program in August 2022
     \end{itemize}
   }}
 
- {\customcventry{Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Brigham Young University}{Provo, UT}{}{
+ {\customcventry{Aug 2014 - Dec 2019}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Brigham Young University}{Provo, UT}{}{
     \begin{itemize}
       \item Cum Laude (\textbf{3.9 GPA}); minor in computer science; concentration in linguistics
       \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (research-style paper \ColorHref{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
-      \item \textbf{Grant-funded research}: used the BYU supercomputer to achieve 71\% accuracy on the ZTC morphology corpus (Basque) with a recent VoCRF implementation
+      \item \textbf{Grant-funded research}: achieved 71\% accuracy on a Basque morphology corpus with a recent VoCRF implementation
     \end{itemize}
   }}
 
@@ -114,14 +116,14 @@
 
 {\customcventry{Jan 2020 - Aug 2021}{Speech scientist (full time)}{Cobalt Speech and Language}{remote from Provo, UT}{}
 {\begin{itemize}
-    \item Built an online training server for Kaldi speech recognition models, using Go to create a parallel pipeline for serving data to multiple models on separate GPUs
-    \item Implemented state-of-the-art algorithms (such as the learning rate range test and adaptive filtering) to set learning rate and momentum in an online training setting
-    \item Implemented MFCC extraction in Go, avoiding allocs and array bound checks to improve performance
+    \item Built an online training service in Go to manage parallel training of Kaldi models on sensitive live data
+    \item Implemented state-of-the-art hyperparameter selection algorithms (learning rate range test; adaptive filtering) for online training
+    \item Implemented MFCC extraction in Go while avoiding allocs and array bound checks
   \end{itemize}
 }
 }
 
-{\customcventry{May - Aug 2019}{Software developer (intern)}{Emergent Trading}{Chicago, IL}{}
+{\customcventry{May 2019 - Aug 2019}{Software developer (intern)}{Emergent Trading}{Chicago, IL}{}
 {\begin{itemize}
     \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
     \item Designed and built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh Python library
@@ -129,7 +131,7 @@
 }
 }
 
-{\customcventry{Jan - Dec 2019}{Research assistant (part time)}{CamachoLab, Brigham Young University}{Provo, UT}{}
+{\customcventry{Jan 2019 - Dec 2019}{Research assistant (part time)}{CamachoLab, Brigham Young University}{Provo, UT}{}
 {
   \begin{itemize}
     \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
@@ -146,7 +148,7 @@
   }
 }
 
-\section{SKILLS \& INTERESTS}
+\section{SKILLS}
 
 \begin{minipage}{\maincolumnwidth}
   \small{
@@ -155,7 +157,6 @@
         \item \textbf{Languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
         \item \textbf{Tools:} PyTorch, TensorFlow, SLURM, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, PySpark
         \item \textbf{Natural languages:} native English, fluent Spanish, basic French
-        \item \textbf{Sports:} skiing, distance running, swimming, cycling
       \end{itemize}
     \end{multicols}}
 \end{minipage}
