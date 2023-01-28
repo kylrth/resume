@@ -1,13 +1,13 @@
 % !TEX program = xelatex
 
-\documentclass[11pt,letterpaper]{article}
+\documentclass[10pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.6in]{geometry}
 \pagestyle{empty}
 \usepackage{multicol}
 \usepackage{parskip}
 
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*,labelindent=0.1in,itemsep=-0.5ex,label=\raisebox{0.25ex}{\tiny\(\bullet\)}}
+\setlist[itemize]{leftmargin=*,labelindent=0.1in,label=\raisebox{0.25ex}{\tiny\(\bullet\)}}
 
 \usepackage{lmodern}
 \usepackage{fontspec}
@@ -21,23 +21,36 @@
 \newcommand*{\cvsection}[1]{
   \vspace{2mm}
   \hrule
-  \vspace*{-0.6em}
-  \section*{#1}
-  \vspace*{-0.4em}
+  \vspace{-0.4em}
+  \subsection*{#1}
 }
 
 \newcommand*{\cventry}[6][.25em]{
   {\bfseries #2}\hfill{\bfseries #3} \\
   \begin{tabular}{@{}l}
-    {\,\,\itshape{} #4}
+    {\,\,\textit{#4}}
   \end{tabular}
   \hfill\textit{#5}
   \ifx&#6&
   \else{\\
     \begin{minipage}{0.77\linewidth}
-      \small#6
+      #6
     \end{minipage}}\fi
   \par\addvspace{#1}
+}
+
+\newcommand*{\cvproject}[5][.25em]{
+  {\bfseries #2}\hfill{\textit{#3}} \\
+  \begin{tabular}{@{}l}
+    {\,\,\textit{#4}}
+  \end{tabular}
+  \ifx&#5&
+  \else{#5}\fi
+  \par\addvspace{#1}
+}
+
+\newcommand*{\cvpub}[6][.25em]{
+  #2. ``#3.'' \textit{#4} #5 \href{#6}{#6}
 }
 
 \begin{document}
@@ -56,29 +69,30 @@
 
 \vspace{2mm}
 
+\cvsection{INTRODUCTION}
+
+Kyle Roth is a first-year PhD candidate in the Département d'informatique et de recherche opérationelle (DIRO) at the Université de Montréal. He is advised by \href{https://www-labs.iro.umontreal.ca/~liubang/cv.pdf}{Bang Liu}. His research interests revolve around natural language processing: procedural knowledge understanding, worst-group generalization, multimodal and embodied learning, and AI alignment.
+
 \cvsection{EDUCATION}
 
-{\cventry{Université de Montréal}{Montréal, QC}{Ph.D., Computer Science; advised by Dr.~Bang Liu}{Sep 2021 - May 2025}{
+{\cventry{Doctor of Philosophy (Ph.D.)}{Sep 2021 -}{Dept.~d'informatique et de rech.~opér., Université de Montréal}{Montréal, Canada}{
     \begin{itemize}
-      \item Investigating the representation of procedural knowledge using language models
       \item \textbf{3.7 GPA}; accelerated admission in fall 2022 from M.Sc.~(\textbf{4.3 GPA})
-      \item Taught Linux and Git lectures for advanced machine learning projects class
     \end{itemize}
   }
 }
 
-{\cventry{Brigham Young University}{Provo, UT}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Aug 2014 - Dec 2019}{
+{\cventry{Bachelor of Science (B.S.)}{Aug 2014 - Dec 2019}{Department of Mathematics, Brigham Young University}{Provo, USA}{
     \begin{itemize}
-      \item Cum Laude (\textbf{3.9 GPA}); minor in computer science; concentration in linguistics
-      \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (research-style paper \href{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
-      \item \textbf{Grant-funded research}: achieved 71\% accuracy on a Basque morphology corpus with a recent VoCRF implementation
+      \item Applied and Computational Mathematics Emphasis (\href{https://acme.byu.edu}{ACME})
+      \item \textbf{3.9 GPA} (Cum Laude); minor in computer science; concentration in linguistics
     \end{itemize}
   }
 }
 
 \cvsection{WORK EXPERIENCE}
 
-{\cventry{Cobalt Speech and Language}{(remote) Provo, UT}{speech scientist (full time)}{Jan 2020 - Aug 2021}{
+{\cventry{Cobalt Speech and Language}{Jan 2020 - Aug 2021}{speech scientist (full time)}{(remote) Provo, USA}{
     \begin{itemize}
       \item Built an online training service in Go to manage parallel training of Kaldi models on sensitive live data
       \item Implemented state-of-the-art hyperparameter selection algorithms (learning rate range test; adaptive filtering) for online training
@@ -87,7 +101,7 @@
   }
 }
 
-{\cventry{Emergent Trading}{Chicago, IL}{software developer (intern)}{May 2019 - Aug 2019}{
+{\cventry{Emergent Trading}{May 2019 - Aug 2019}{software developer (intern)}{Chicago, USA}{
     \begin{itemize}
       \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
       \item Designed and built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh Python library
@@ -95,7 +109,7 @@
   }
 }
 
-{\cventry{CamachoLab, Brigham Young University}{Provo, UT}{research assistant (part time)}{Jan 2019 - Dec 2019}{
+{\cventry{CamachoLab, Brigham Young University}{Jan 2019 - Dec 2019}{research assistant (part time)}{Provo, USA}{
     \begin{itemize}
       \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
       \item Built \href{https://github.com/kylrth/slurm_gen}{SLURM\_gen}, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
@@ -104,24 +118,69 @@
   }
 }
 
-{\cventry{Cobalt Speech and Language}{(remote) Provo, UT}{speech scientist (intern)}{Apr 2018 - Nov 2018}{
+{\cventry{Cobalt Speech and Language}{Apr 2018 - Nov 2018}{speech scientist (intern)}{(remote) Provo, USA}{
     \begin{itemize}
       \item Improved model accuracy from 76\% to 94\% for autonomous drone recognition of air traffic control speech, using class-based (Thrax) language models
     \end{itemize}
   }
 }
 
+\cvsection{HONORS \& AWARDS}
+
+\begin{itemize}
+  \setlength\itemsep{0.25em}
+  \item Université de Montréal bourse d'exemption, 3e cycle (42,076.26 CAD)\hfill\textit{Aug 2022 - Aug 2024}
+  \item Université de Montréal bourse d'exemption, 2e cycle (9,789.06 CAD)\hfill\textit{Aug 2021 - Aug 2022}
+  \item Brigham Young University Mathematics Department certificate of excellence\hfill\textit{Apr 2018}
+  \item North Idaho College mathematics student of the year\hfill\textit{May 2014}
+\end{itemize}
+
+\cvsection{PUBLICATIONS}
+
+{\cvpub{\textbf{Kyle Roth}, Deryle Lonsdale}{Morphological Parsing and Segmentation}{BYU Journal of Undergraduate Research}{(2019): 24280.}{http://jur.byu.edu/?p=24280}}
+
+\cvsection{RESEARCH GRANTS}
+
+{\cvproject{Mitacs Accelerate}{Aug 2022 - Apr 2023}{20,000 CAD. Principal research intern.}{
+    \begin{itemize}
+      \item Project title: Technical and procedural knowledge extraction with question answering.
+      \item Partner organization: Thales Canada Inc.
+    \end{itemize}
+  }
+}
+
+{\cvproject{BYU ORCA undergraduate research grant}{Jan 2018 - Dec 2018}{1,500 USD. Individual mentored research project.}{
+    \begin{itemize}
+      \item Project title: Morphological parsing and segmentation.
+    \end{itemize}
+  }
+}
+
+\cvsection{TEACHING \& SERVICE}
+
+{\cvproject{teaching assistant}{Jan 2023 - May 2023}{Université de Montréal; IFT 6759: advanced machine learning projects}{
+    \begin{itemize}
+      \item Taught introductory lectures on Linux, Git, and other development tooling
+    \end{itemize}
+  }
+}
+
+\textbf{reviewer}
+\vspace*{-1mm}
+\begin{itemize}
+  \setlength\itemsep{0em}
+  \item 2023 - AAAI, CVPR, WWW, ACL ARR, Elsevier Pattern Recognition
+  \item 2022 - Elsevier Knowledge-Based Systems
+\end{itemize}
+
+{\cvproject{math lab tutor}{Aug 2013 - May 2014}{North Idaho College; calculus I, II, III, \& differential equations}{}{}}
+
 \cvsection{SKILLS}
 
-\begin{minipage}{\linewidth}
-  \small\begin{multicols}{2}
-    \begin{itemize}
-      \setlength\itemsep{0ex}
-      \item \textbf{languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
-      \item \textbf{tools:} PyTorch, TensorFlow, SLURM, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, PySpark
-      \item \textbf{natural languages:} native English, fluent Spanish, basic French
-    \end{itemize}
-  \end{multicols}
-\end{minipage}
+\begin{itemize}
+  \item \textbf{natural languages:} native English, fluent Spanish, basic French
+  \item \textbf{programming languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
+  \item \textbf{tools:} PyTorch, TensorFlow, SLURM, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, PySpark
+\end{itemize}
 
 \end{document}
