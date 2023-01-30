@@ -33,7 +33,7 @@
   \hfill\textit{#5}
   \ifx&#6&
   \else{\\
-    \begin{minipage}{0.77\linewidth}
+    \begin{minipage}{0.8\linewidth}
       #6
     \end{minipage}}\fi
   \par\addvspace{#1}
@@ -45,7 +45,10 @@
     {\,\,\textit{#4}}
   \end{tabular}
   \ifx&#5&
-  \else{#5}\fi
+  \else{\\
+  \begin{minipage}{0.8\linewidth}
+    #5
+  \end{minipage}}\fi
   \par\addvspace{#1}
 }
 
@@ -139,12 +142,14 @@ Kyle Roth is a first-year PhD candidate in the Département d'informatique et d
 
 {\cvpub{\textbf{Kyle Roth}, Deryle Lonsdale}{Morphological Parsing and Segmentation}{BYU Journal of Undergraduate Research}{(2019): 24280.}{http://jur.byu.edu/?p=24280}}
 
-\cvsection{RESEARCH GRANTS}
+\cvsection{RESEARCH EXPERIENCE}
 
 {\cvproject{Mitacs Accelerate}{Aug 2022 - Apr 2023}{20,000 CAD. Principal research intern.}{
     \begin{itemize}
-      \item Project title: Technical and procedural knowledge extraction with question answering.
-      \item Partner organization: Thales Canada Inc.
+      \item \textit{Project title:} Technical and procedural knowledge extraction with question answering.
+      \item \textit{Partner organization:} Thales Canada Inc.
+      \item \textit{Project description:} In large organizations it's important preserve expert knowledge with written documentation, but that documentation often contains redundant information, leaves out key details, and is difficult to search due to its open form. Our objective is to develop models that can recognize technical procedures from available documents, draw inferences about similar objects and operations, and then recognize where knowledge is incomplete so it can prompt human experts for missing information.\\
+            As a part of this project, we are studying large language models' understanding of their own knowledge: we want to evaluate their ability to recognize when they don't have an answer and to generate questions to augment their understanding. This will tell us to what extent these models will need to be fine-tuned or augmented with heuristics in order to be used to manage technical documentation.
     \end{itemize}
   }
 }
