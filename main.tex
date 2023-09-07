@@ -14,6 +14,8 @@
 \setmainfont[Ligatures=TeX]{Noto Serif}
 \usepackage{fontawesome}
 
+\usepackage{xcolor}
+
 \usepackage{hyperref}
 
 \setlength{\tabcolsep}{12pt}
@@ -58,9 +60,9 @@
 
 \cvsection{EDUCATION}
 
-{\cventry{Université de Montréal}{Montréal, QC}{Ph.D., Computer Science; advised by Dr.~Bang Liu}{Sep 2021 - May 2025}{
+{\cventry{Université de Montréal}{Montréal, QC}{Ph.D., Computer Science; advised by Dr.~Bang Liu}{Sep 2021 - May 2026}{
     \begin{itemize}
-      \item Investigating the representation of procedural knowledge using language models
+      \item Research on augmenting large language models to better interact with procedural knowledge (code library documentation and instruction manuals)
       \item \textbf{3.7 GPA}; accelerated admission in fall 2022 from M.Sc.~(\textbf{4.3 GPA})
       \item Taught Linux and Git lectures for advanced machine learning projects class
     \end{itemize}
@@ -70,7 +72,7 @@
 {\cventry{Brigham Young University}{Provo, UT}{B.S., Mathematics; Applied and Computational Mathematics Emphasis}{Aug 2014 - Dec 2019}{
     \begin{itemize}
       \item Cum Laude (\textbf{3.9 GPA}); minor in computer science; concentration in linguistics
-      \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (research-style paper \href{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
+      \item \textbf{Senior project}: scored 76\% accuracy on phoneme classification of the TIMIT corpus (final report \href{https://github.com/jarednielsen/speech2phone/blob/master/results/winter_semester_report.pdf}{here})
       \item \textbf{Grant-funded research}: achieved 71\% accuracy on a Basque morphology corpus with a recent VoCRF implementation
     \end{itemize}
   }
@@ -87,19 +89,19 @@
   }
 }
 
-{\cventry{Emergent Trading}{Chicago, IL}{software developer (intern)}{May 2019 - Aug 2019}{
-    \begin{itemize}
-      \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
-      \item Designed and built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh Python library
-    \end{itemize}
-  }
-}
-
 {\cventry{CamachoLab, Brigham Young University}{Provo, UT}{research assistant (part time)}{Jan 2019 - Dec 2019}{
     \begin{itemize}
       \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
       \item Built \href{https://github.com/kylrth/slurm_gen}{SLURM\_gen}, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
       \item Wrote custom resize-convolution layer to improve performance
+    \end{itemize}
+  }
+}
+
+{\cventry{Emergent Trading}{Chicago, IL}{software developer (intern)}{May 2019 - Aug 2019}{
+    \begin{itemize}
+      \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
+      \item Created an interactive tool to observe currency market behavior using Bokeh
     \end{itemize}
   }
 }
@@ -118,8 +120,10 @@
     \begin{itemize}
       \setlength\itemsep{0ex}
       \item \textbf{languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
-      \item \textbf{tools:} PyTorch, TensorFlow, SLURM, Kaldi, git, scikit-learn, NumPy, Pandas, AWS, SQL, PySpark
-      \item \textbf{natural languages:} native English, fluent Spanish, basic French
+      \item \textbf{tools:} PyTorch, TensorFlow, LangChain, SLURM, Git, Docker, Flutter, scikit-learn, AWS, SQL
+      \item \textbf{natural languages:} native English, fluent Spanish, intermediate French
+            %% keywords for automated resume readers %%
+            \textcolor{white}{keywords: LLMs, NumPy, Pandas, PySpark}
     \end{itemize}
   \end{multicols}
 \end{minipage}
