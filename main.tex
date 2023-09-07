@@ -14,6 +14,8 @@
 \setmainfont[Ligatures=TeX]{Noto Serif}
 \usepackage{fontawesome}
 
+\usepackage{xcolor}
+
 \usepackage{hyperref}
 
 \setlength{\tabcolsep}{12pt}
@@ -74,7 +76,7 @@
 
 \cvsection{INTRODUCTION}
 
-Kyle Roth is a first-year PhD candidate in the Département d'informatique et de recherche opérationelle (DIRO) at the Université de Montréal. He is advised by \href{https://www-labs.iro.umontreal.ca/~liubang/cv.pdf}{Bang Liu}. His research interests revolve around natural language processing: procedural knowledge understanding, worst-group generalization, multimodal and embodied learning, and AI alignment.
+Kyle Roth is a second-year PhD candidate in the Département d'informatique et de recherche opérationelle (DIRO) at the Université de Montréal. He is advised by \href{https://www-labs.iro.umontreal.ca/~liubang/cv.pdf}{Bang Liu}. His research interests revolve around natural language processing: procedural knowledge understanding, worst-group generalization, and ethics of intelligent automation. His main research project focuses on augmenting large language models to better handle procedural knowledge.
 
 \cvsection{EDUCATION}
 
@@ -104,19 +106,19 @@ Kyle Roth is a first-year PhD candidate in the Département d'informatique et d
   }
 }
 
-{\cventry{Emergent Trading}{May 2019 - Aug 2019}{software developer (intern)}{Chicago, USA}{
-    \begin{itemize}
-      \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
-      \item Designed and built an interactive tool to observe trades and prices in Brazilian currency futures using the Bokeh Python library
-    \end{itemize}
-  }
-}
-
 {\cventry{CamachoLab, Brigham Young University}{Jan 2019 - Dec 2019}{research assistant (part time)}{Provo, USA}{
     \begin{itemize}
       \item Simulated field profiles of photonic chip components in TensorFlow using neural networks with resize convolutions
       \item Built \href{https://github.com/kylrth/slurm_gen}{SLURM\_gen}, a tool to automatically generate and manage simulated datasets in a high-performance computing environment
       \item Wrote custom resize-convolution layer to improve performance
+    \end{itemize}
+  }
+}
+
+{\cventry{Emergent Trading}{May 2019 - Aug 2019}{software developer (intern)}{Chicago, USA}{
+    \begin{itemize}
+      \item Wrote fast market analysis code in C++ to track competitors on currency markets at the Chicago Mercantile Exchange
+      \item Created an interactive tool to observe currency market behavior using Bokeh
     \end{itemize}
   }
 }
@@ -145,12 +147,12 @@ Kyle Roth is a first-year PhD candidate in the Département d'informatique et d
 
 \cvsection{RESEARCH EXPERIENCE}
 
-{\cvproject{Mitacs Accelerate}{Aug 2022 - Apr 2023}{20,000 CAD. Principal research intern.}{
+{\cvproject{Mitacs Accelerate}{Aug 2022 -}{30,000 CAD. Principal research intern.}{
     \begin{itemize}
       \item \textit{Project title:} Technical and procedural knowledge extraction with question answering.
       \item \textit{Partner organization:} Thales Canada Inc.
       \item \textit{Project description:} In large organizations it's important preserve expert knowledge with written documentation, but that documentation often contains redundant information, leaves out key details, and is difficult to search due to its open form. Our objective is to develop models that can recognize technical procedures from available documents, draw inferences about similar objects and operations, and then recognize where knowledge is incomplete so it can prompt human experts for missing information.\\
-            As a part of this project, we are studying large language models' understanding of their own knowledge: we want to evaluate their ability to recognize when they don't have an answer and to generate questions to augment their understanding. This will tell us to what extent these models will need to be fine-tuned or augmented with heuristics in order to be used to manage technical documentation.
+            As a part of this project, we seek to improve large language models' understanding of procedural knowledge. Retrieval-augmented generation (RAG) is widely used to improve the factuality of LLMs' outputs, but can struggle to collect information from the wide set of documents to produce accurate procedures. We are developing a method called analogy-augmented generation (AAG) to address this.
     \end{itemize}
   }
 }
@@ -194,7 +196,9 @@ Kyle Roth is a first-year PhD candidate in the Département d'informatique et d
 \begin{itemize}
   \item \textbf{natural languages:} native English, fluent Spanish, basic French
   \item \textbf{programming languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
-  \item \textbf{tools:} PyTorch, TensorFlow, SLURM, Kaldi, Git, scikit-learn, NumPy, Pandas, AWS, SQL, PySpark
+  \item \textbf{tools:} PyTorch, TensorFlow, LangChain, SLURM, Git, Docker, Flutter, scikit-learn, AWS, SQL
+        %% keywords for automated resume readers %%
+        \textcolor{white}{keywords: LLMs, NumPy, Pandas, PySpark}
 \end{itemize}
 
 \end{document}
