@@ -74,11 +74,11 @@
 
 \cvsection{INTRODUCTION}
 
-Kyle Roth is a second-year PhD candidate in the Département d'informatique et de recherche opérationelle (DIRO) at the Université de Montréal. He is advised by \href{https://www-labs.iro.umontreal.ca/~liubang/cv.pdf}{Bang Liu}. His research interests revolve around natural language processing: procedural knowledge understanding, worst-group generalization, and ethics of intelligent automation. His main research project focuses on augmenting large language models to better handle procedural knowledge.
+Kyle Roth is a third-year PhD candidate in the Département d'informatique et de recherche opérationelle (DIRO) at the Université de Montréal. He is advised by \href{https://www-labs.iro.umontreal.ca/~liubang/cv.pdf}{Bang Liu}. His research focuses on the structured use of LLMs within larger pipelines and agent systems, both from robustness and sociotechnical perspectives. His main research project focuses on augmenting these systems with structures for procedural knowledge understanding and adaptation for planning.
 
 \cvsection{EDUCATION}
 
-{\cventry{Doctor of Philosophy (Ph.D.)}{Sep 2021 -}{Dept.~d'informatique et de rech.~opér., Université de Montréal}{Montréal, Canada}{
+{\cventry{Doctor of Philosophy (Ph.D.)}{Sep 2021 -}{DIRO, Université de Montréal \& Mila}{Montréal, Canada}{
     \begin{itemize}
       \item \textbf{3.7 GPA}; accelerated admission in fall 2022 from M.Sc.~(\textbf{4.3 GPA})
     \end{itemize}
@@ -93,7 +93,25 @@ Kyle Roth is a second-year PhD candidate in the Département d'informatique et 
   }
 }
 
-\cvsection{WORK EXPERIENCE}
+\cvsection{RESEARCH EXPERIENCE}
+
+{\cvproject{Mitacs Accelerate}{Aug 2022 - May 2024}{30,000 CAD. Principal research intern.}{
+    \begin{itemize}
+      \item \textit{Project title:} Technical and procedural knowledge extraction with question answering.
+      \item \textit{Partner organization:} Thales Canada Inc.
+      \item \textit{Project description:} We sought to build an LLM-enabled system to handle procedural knowledge (how-to instructions). Retrieval-augmented generation (RAG) is widely used to improve the factuality of LLMs' outputs, but can struggle to collect information from the wide set of documents and combine them coherently to produce novel procedures. To address this we developed a method called analogy-augmented generation (AAG) to address this, and tested it on datasets in several procedural knowledge domains, including a dataset of LangChain tutorials we constructed.
+    \end{itemize}
+  }
+}
+
+{\cvproject{BYU ORCA undergraduate research grant}{Jan 2018 - Dec 2018}{1,500 USD. Individual mentored research project.}{
+    \begin{itemize}
+      \item Project title: Morphological parsing and segmentation.
+    \end{itemize}
+  }
+}
+
+\cvsection{PROFESSIONAL EXPERIENCE}
 
 {\cventry{Cobalt Speech and Language}{Jan 2020 - Aug 2021}{speech scientist (full time)}{(remote) Provo, USA}{
     \begin{itemize}
@@ -128,6 +146,12 @@ Kyle Roth is a second-year PhD candidate in the Département d'informatique et 
   }
 }
 
+\cvsection{PUBLICATIONS}
+
+{\cvpub{\textbf{K Roth}, Rushil Gupta, Simon Halle, Bang Liu}{Pairing Analogy-Augmented Generation with Procedural Memory for Procedural Q\&A}{Under review at ACL ARR.}{}{https://arxiv.org/abs/2409.01344}}
+
+{\cvpub{\textbf{Kyle Roth}, Deryle Lonsdale}{Morphological Parsing and Segmentation}{BYU Journal of Undergraduate Research}{(2019): 24280.}{http://jur.byu.edu/?p=24280}}
+
 \cvsection{HONORS \& AWARDS}
 
 \begin{itemize}
@@ -139,34 +163,12 @@ Kyle Roth is a second-year PhD candidate in the Département d'informatique et 
   \item North Idaho College mathematics student of the year\hfill\textit{May 2014}
 \end{itemize}
 
-\cvsection{PUBLICATIONS}
-
-{\cvpub{\textbf{Kyle Roth}, Deryle Lonsdale}{Morphological Parsing and Segmentation}{BYU Journal of Undergraduate Research}{(2019): 24280.}{http://jur.byu.edu/?p=24280}}
-
-\cvsection{RESEARCH EXPERIENCE}
-
-{\cvproject{Mitacs Accelerate}{Aug 2022 -}{30,000 CAD. Principal research intern.}{
-    \begin{itemize}
-      \item \textit{Project title:} Technical and procedural knowledge extraction with question answering.
-      \item \textit{Partner organization:} Thales Canada Inc.
-      \item \textit{Project description:} In large organizations it's important to preserve expert knowledge with written documentation, but that documentation often contains redundant information, leaves out key details, and is difficult to search due to its open form. Our objective is to develop models that can recognize technical procedures from available documents, draw inferences about similar objects and operations, and then recognize where knowledge is incomplete so it can prompt human experts for missing information.\\
-            As a part of this project, we seek to improve large language models' understanding of procedural knowledge. Retrieval-augmented generation (RAG) is widely used to improve the factuality of LLMs' outputs, but can struggle to collect information from the wide set of documents to produce accurate procedures. We are developing a method called analogy-augmented generation (AAG) to address this.
-    \end{itemize}
-  }
-}
-
-{\cvproject{BYU ORCA undergraduate research grant}{Jan 2018 - Dec 2018}{1,500 USD. Individual mentored research project.}{
-    \begin{itemize}
-      \item Project title: Morphological parsing and segmentation.
-    \end{itemize}
-  }
-}
-
 \cvsection{TEACHING \& SERVICE}
 
-{\cvproject{teaching assistant}{Jan 2023 - May 2023}{Université de Montréal; IFT 6759: advanced machine learning projects}{
+{\cvproject{teaching assistant}{Jan - May (2023, 2024)}{Université de Montréal; IFT 6759: advanced machine learning projects}{
     \begin{itemize}
-      \item Taught introductory lectures on Linux, Git, and other development tooling
+      \item Advised student groups weekly to help design their experiments
+      \item Taught introductory lectures on Linux, Git, SLURM, and other development tooling
     \end{itemize}
   }
 }
@@ -175,7 +177,8 @@ Kyle Roth is a second-year PhD candidate in the Département d'informatique et 
 \vspace*{-1mm}
 \begin{itemize}
   \setlength\itemsep{0em}
-  \item 2023 - AAAI, CVPR, WWW, ACL ARR, Elsevier Pattern Recognition
+  \item 2024 - KDD, TOMM, NeurIPS, CIKM, COLM, ECCV, IJCAI, TNNLS, SIGIR, NAACL, SoLaR
+  \item 2023 - Coling, TNNLS, ICKG, AAAI, CVPR, WSDM, CIKM, WWW, ACL ARR, Elsevier Pattern Recognition
   \item 2022 - Elsevier Knowledge-Based Systems
 \end{itemize}
 
@@ -192,11 +195,11 @@ Kyle Roth is a second-year PhD candidate in the Département d'informatique et 
 \cvsection{SKILLS}
 
 \begin{itemize}
-  \item \textbf{natural languages:} native English, fluent Spanish, basic French
+  \item \textbf{natural languages:} native English, fluent Spanish, functional French
   \item \textbf{programming languages:} Python, Go, C++, Java, Dart, Bash, \LaTeX{}
-  \item \textbf{tools:} PyTorch, TensorFlow, LangChain, SLURM, Git, Docker, Flutter, scikit-learn, AWS, SQL
+  \item \textbf{tools:} PyTorch, LangChain, Weaviate, SLURM, Git, Docker, Flutter, scikit-learn, TensorFlow, AWS, SQL
         %% keywords for automated resume readers %%
-        \textcolor{white}{keywords: LLMs, NumPy, Pandas, PySpark}
+        \textcolor{white}{keywords: LLMs, NumPy, SciPy, Bash, Pandas, PySpark, Linux, Android}
 \end{itemize}
 
 \end{document}
